@@ -5,9 +5,48 @@
   <meta name="viewport" content="width=device-width">
   <link href="https://cdn.jsdelivr.net/npm/daisyui@5" rel="stylesheet" type="text/css" />
   <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
-  <link href="https://cdn.jsdelivr.net/combine/npm/daisyui@5/theme/caramellatte.css" rel="stylesheet" type="text/css" />
+  <link href="https://cdn.jsdelivr.net/npm/daisyui@5/themes.css" rel="stylesheet" type="text/css"/>
 </head>
 <body data-theme="caramellatte" class="bg-base-100">
+  <div class="form-control w-64 absolute">
+    <select id="theme_selector">
+      <option>light</option>
+      <option>dark</option>
+      <option>cupcake</option>
+      <option>bumblebee</option>
+      <option>emerald</option>
+      <option>corporate</option>
+      <option>synthwave</option>
+      <option>retro</option>
+      <option>cyberpunk</option>
+      <option>valentine</option>
+      <option>halloween</option>
+      <option>garden</option>
+      <option>forest</option>
+      <option>aqua</option>
+      <option>lofi</option>
+      <option>pastel</option>
+      <option>fantasy</option>
+      <option>wireframe</option>
+      <option>black</option>
+      <option>luxury</option>
+      <option>dracula</option>
+      <option>cmyk</option>
+      <option>autumn</option>
+      <option>business</option>
+      <option>acid</option>
+      <option>lemonade</option>
+      <option>night</option>
+      <option>coffee</option>
+      <option>winter</option>
+      <option>dim</option>
+      <option>nord</option>
+      <option>sunset</option>
+      <option selected>caramellatte</option>
+      <option>abyss</option>
+      <option>silk</option>
+    </select>
+  </div>
   <div class="flex items-center justify-center min-h-screen">
     <div class="flex flex-col items-center space-y-4">
       <img style="transform: rotate(15deg);" class="mb-[-15px] bg-base-100 w-[150px]" src="https://en.sun-asterisk.com/wp-content/themes/basetemplate/assets/images/sustainability/susti-sunbear.svg">
@@ -77,5 +116,11 @@
       </div>
     </div>
   </div>
+  <script>
+    const themeSelect = document.getElementById('theme_selector');
+    themeSelect.addEventListener('change', (event) => {
+      document.body.setAttribute('data-theme', event.target.value);
+    });
+  </script>
 </body>
 </html>
