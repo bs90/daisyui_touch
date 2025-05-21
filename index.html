@@ -47,7 +47,65 @@
       <option>silk</option>
     </select>
   </div>
-  <div class="flex items-center justify-center min-h-screen">
+  <div class="flex items-center justify-center min-h-screen" id="animated_chat">
+    <div class="w-[500px]">
+      <div class="hidden one-chat chat chat-start">
+        <div class="chat-image avatar">
+          <div class="w-8 rounded-full">
+            <img alt="Tailwind CSS chat bubble component" src="https://en.sun-asterisk.com/wp-content/themes/basetemplate/assets/images/sustainability/susti-sunbear.svg">
+          </div>
+        </div>
+        <div class="chat-header">くま</div>
+        <div class="chat-bubble chat-bubble-neutral break-keep">最近ずっとフルリモートで働いてるから、会社の人とあまり関わりがなくて…ちょっと寂しいんだよね。</div>
+      </div>
+
+      <div class="hidden one-chat chat chat-end">
+        <div class="chat-header">たっちゃん</div>
+        <div class="chat-bubble chat-bubble-neutral break-keep bg-success">ああ、分かるよ。その気持ち。でも、Sun*の社員なら「Sun*タッチ」っていうサービス使ってみたらどう？</div>
+      </div>
+
+      <div class="hidden one-chat chat chat-start">
+        <div class="chat-image avatar">
+          <div class="w-8 rounded-full">
+            <img alt="Tailwind CSS chat bubble component" src="https://en.sun-asterisk.com/wp-content/themes/basetemplate/assets/images/sustainability/susti-sunbear.svg">
+          </div>
+        </div>
+        <div class="chat-header">くま</div>
+        <div class="chat-bubble chat-bubble-neutral break-keep">Sun*タッチ？それって何？</div>
+      </div>
+
+      <div class="hidden one-chat chat chat-end">
+        <div class="chat-header">たっちゃん</div>
+        <div class="chat-bubble chat-bubble-neutral break-keep bg-success">Sun*社員専用のサービスで、自分の住んでる地域の近くにいる同僚を探して、気軽にチャットしたりできるんだよ。</div>
+      </div>
+
+      <div class="hidden one-chat chat chat-start">
+        <div class="chat-image avatar">
+          <div class="w-8 rounded-full">
+            <img alt="Tailwind CSS chat bubble component" src="https://en.sun-asterisk.com/wp-content/themes/basetemplate/assets/images/sustainability/susti-sunbear.svg">
+          </div>
+        </div>
+        <div class="chat-header">くま</div>
+        <div class="chat-bubble chat-bubble-neutral break-keep">えー、面白そう！でも…個人情報とか漏れたりしない？自分の居場所をあまり広く知られたくないな。。。</div>
+      </div>
+
+      <div class="hidden one-chat chat chat-end">
+        <div class="chat-header">たっちゃん</div>
+        <div class="chat-bubble chat-bubble-neutral break-keep bg-success">大丈夫だよ。完全匿名でも使えるし、チャットの内容もちゃんと暗号化されてるから、セキュリティもバッチリ。</div>
+      </div>
+
+      <div class="hidden one-chat chat chat-start">
+        <div class="chat-image avatar">
+          <div class="w-8 rounded-full">
+            <img alt="Tailwind CSS chat bubble component" src="https://en.sun-asterisk.com/wp-content/themes/basetemplate/assets/images/sustainability/susti-sunbear.svg">
+          </div>
+        </div>
+        <div class="chat-header">くま</div>
+        <div class="chat-bubble chat-bubble-neutral break-keep">そうなんだ！それなら安心だね。なんかワクワクしてきた！今すぐ使ってみたい！</div>
+      </div>
+    </div>
+  </div>
+  <div class="hidden flex items-center justify-center min-h-screen" id="end_description">
     <div class="flex flex-col items-center space-y-4">
       <img style="transform: rotate(15deg);" class="transition-transform duration-300 hover:rotate-12 mb-[-15px] w-[150px]" src="https://en.sun-asterisk.com/wp-content/themes/basetemplate/assets/images/sustainability/susti-sunbear.svg">
       <div class="scale-150 card bg-base-100 card-border border-base-300 from-base-content/5 bg-linear-to-bl to-50%">
@@ -71,7 +129,10 @@
               Sun*メンバー限定、<span class="text-xl font-bold">完全匿名</span>で利用可能
             </div>
           </div>
-          <a href="/signup.html" class="btn btn-accent">つながる</a>
+          <a href="/signup" class="btn btn-accent">つながる</a>
+          <div class="flex justify-center">
+            <a href="/" class="link">もう1回説明を見る</a>
+          </div>
         </div>
       </div>
     </div>
@@ -81,6 +142,48 @@
     themeSelect.addEventListener('change', (event) => {
       document.body.setAttribute('data-theme', event.target.value);
     });
+
+    const messages = Array.from(document.querySelectorAll('.one-chat'));
+    const shownMessages = [];
+    let currentIndex = 0;
+    const delay = 3333;
+
+    function showEndMessage() {
+      document.getElementById("animated_chat").classList.add("hidden");
+      document.getElementById("end_description").classList.remove("hidden");
+      document.getElementById("end_description").classList.add("animate-bounce");
+      document.getElementById("end_description").style.animationDuration = '0.5s';
+      document.getElementById("end_description").style.animationIterationCount = '0.5';
+    }
+
+    function showNextMessage() {
+      if (currentIndex >= messages.length) {
+        setTimeout(showEndMessage, 5000);
+      }
+
+      const msg = messages[currentIndex];
+      msg.classList.remove('hidden');
+      msg.classList.add('animate-bounce');
+      msg.style.animationDuration = '0.5s';
+      msg.style.animationIterationCount = '0.5';
+      shownMessages.push(msg);
+
+      for (let i = 0; i < shownMessages.length - 1; i++) {
+        const m = shownMessages[i];
+
+        if (i <= shownMessages.length - 6) {
+          m.classList.add("hidden");
+        } else {
+          m.style.opacity = 0.8 - (shownMessages.length - i) * 0.1;
+          m.classList.remove("animate-bounce");
+        }
+      }
+
+      currentIndex++;
+      setTimeout(showNextMessage, delay);
+    }
+
+    showNextMessage();
   </script>
 </body>
 </html>
