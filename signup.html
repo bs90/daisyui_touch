@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width">
+  <link href="https://cdn.jsdelivr.net/npm/daisyui@5" rel="stylesheet" type="text/css" />
+  <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+  <link href="https://cdn.jsdelivr.net/npm/daisyui@5/themes.css" rel="stylesheet" type="text/css"/>
+</head>
+<body data-theme="caramellatte" class="bg-base-100">
+  <div class="form-control w-64 absolute">
+    <select id="theme_selector">
+      <option>light</option>
+      <option>cupcake</option>
+      <option>bumblebee</option>
+      <option>emerald</option>
+      <option>corporate</option>
+      <option>synthwave</option>
+      <option>retro</option>
+      <option>cyberpunk</option>
+      <option>valentine</option>
+      <option>halloween</option>
+      <option>garden</option>
+      <option>forest</option>
+      <option>aqua</option>
+      <option>lofi</option>
+      <option>pastel</option>
+      <option>fantasy</option>
+      <option>wireframe</option>
+      <option>black</option>
+      <option>luxury</option>
+      <option>dracula</option>
+      <option>cmyk</option>
+      <option>autumn</option>
+      <option>business</option>
+      <option>acid</option>
+      <option>lemonade</option>
+      <option>night</option>
+      <option>coffee</option>
+      <option>winter</option>
+      <option>dim</option>
+      <option>nord</option>
+      <option>sunset</option>
+      <option selected>caramellatte</option>
+      <option>abyss</option>
+      <option>silk</option>
+    </select>
+  </div>
+  <div class="flex items-center justify-center min-h-screen">
+    <div class="flex flex-col items-center space-y-4">
+      <img style="transform: rotate(15deg);" class="transition-transform duration-300 hover:rotate-12 mb-[-15px] w-[150px]" src="https://en.sun-asterisk.com/wp-content/themes/basetemplate/assets/images/sustainability/susti-sunbear.svg">
+      <div class="scale-125 card bg-base-100 card-border border-base-300 card-sm overflow-hidden">
+        <div class="border-base-300 border-b border-dashed">
+          <div class="flex items-center gap-2 p-4">
+            <div class="grow">
+              <div class="flex items-center gap-2 text-sm font-medium">
+                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-5 opacity-40">
+                  <path stroke-linecap="round" stroke-linejoin="round" d="M18 7.5v3m0 0v3m0-3h3m-3 0h-3m-2.25-4.125a3.375 3.375 0 1 1-6.75 0 3.375 3.375 0 0 1 6.75 0ZM3 19.235v-.11a6.375 6.375 0 0 1 12.75 0v.109A12.318 12.318 0 0 1 9.374 21c-2.331 0-4.512-.645-6.374-1.766Z"></path>
+                </svg> 会員登録
+                <small>(Sun*メンバー限定／完全に匿名)</small>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="card-body gap-4">
+          <div class="flex flex-col gap-1">
+            <label class="input input-border flex max-w-none items-center gap-2">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" fill="currentColor" class="h-4 w-4 opacity-70">
+                <path d="M8 8a3 3 0 1 0 0-6 3 3 0 0 0 0 6ZM12.735 14c.618 0 1.093-.561.872-1.139a6.002 6.002 0 0 0-11.215 0c-.22.578.254 1.139.872 1.139h9.47Z"></path>
+              </svg>
+              <input type="text" class="grow" placeholder="ユーザー名">
+            </label>
+          </div>
+          <div class="flex flex-col gap-1">
+            <label class="input input-border flex max-w-none items-center gap-2">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" fill="currentColor" class="h-4 w-4 opacity-70">
+                <path fill-rule="evenodd" d="M14 6a4 4 0 0 1-4.899 3.899l-1.955 1.955a.5.5 0 0 1-.353.146H5v1.5a.5.5 0 0 1-.5.5h-2a.5.5 0 0 1-.5-.5v-2.293a.5.5 0 0 1 .146-.353l3.955-3.955A4 4 0 1 1 14 6Zm-4-2a.75.75 0 0 0 0 1.5.5.5 0 0 1 .5.5.75.75 0 0 0 1.5 0 2 2 0 0 0-2-2Z" clip-rule="evenodd"></path>
+              </svg>
+              <input type="password" class="grow" placeholder="パスワード">
+            </label>
+          </div>
+          <div class="flex flex-col gap-1">
+            <label class="input input-border flex max-w-none items-center gap-2">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" fill="currentColor" class="h-4 w-4 opacity-70">
+                <path fill-rule="evenodd" d="M14 6a4 4 0 0 1-4.899 3.899l-1.955 1.955a.5.5 0 0 1-.353.146H5v1.5a.5.5 0 0 1-.5.5h-2a.5.5 0 0 1-.5-.5v-2.293a.5.5 0 0 1 .146-.353l3.955-3.955A4 4 0 1 1 14 6Zm-4-2a.75.75 0 0 0 0 1.5.5.5 0 0 1 .5.5.75.75 0 0 0 1.5 0 2 2 0 0 0-2-2Z" clip-rule="evenodd"></path>
+              </svg>
+              <input type="password" class="grow" placeholder="確認用のパスワード">
+            </label>
+            <span class="text-base-content/60 flex items-center gap-2 px-1 text-[0.6875rem]">
+              <span class="status status-error inline-block"></span>10文字以上で設定してください。</span>
+          </div>
+          <div class="flex flex-col gap-1">
+            <label class="input input-border flex max-w-none items-center gap-2">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" fill="currentColor" class="h-4 w-4 opacity-70">
+                <path fill-rule="evenodd" d="M14 6a4 4 0 0 1-4.899 3.899l-1.955 1.955a.5.5 0 0 1-.353.146H5v1.5a.5.5 0 0 1-.5.5h-2a.5.5 0 0 1-.5-.5v-2.293a.5.5 0 0 1 .146-.353l3.955-3.955A4 4 0 1 1 14 6Zm-4-2a.75.75 0 0 0 0 1.5.5.5 0 0 1 .5.5.75.75 0 0 0 1.5 0 2 2 0 0 0-2-2Z" clip-rule="evenodd"></path>
+              </svg>
+              <input type="password" class="grow" placeholder="秘密キー">
+            </label>
+            <span class="text-base-content/60 flex items-center gap-2 px-1 text-[0.6875rem]">
+              <span class="status status-error inline-block"></span>秘密キーが正しくありません。</span>
+          <div class="mt-[15px] alert alert-dash max-sm:alert-vertical alert-warning text-xs font-bold">
+            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-6">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M9 12.75 11.25 15 15 9.75M21 12c0 1.268-.63 2.39-1.593 3.068a3.745 3.745 0 0 1-1.043 3.296 3.745 3.745 0 0 1-3.296 1.043A3.745 3.745 0 0 1 12 21c-1.268 0-2.39-.63-3.068-1.593a3.746 3.746 0 0 1-3.296-1.043 3.745 3.745 0 0 1-1.043-3.296A3.745 3.745 0 0 1 3 12c0-1.268.63-2.39 1.593-3.068a3.745 3.745 0 0 1 1.043-3.296 3.746 3.746 0 0 1 3.296-1.043A3.746 3.746 0 0 1 12 3c1.268 0 2.39.63 3.068 1.593a3.746 3.746 0 0 1 3.296 1.043 3.746 3.746 0 0 1 1.043 3.296A3.745 3.745 0 0 1 21 12Z"></path>
+            </svg>
+            <a class="link" target="_blank" href="https://sun-jp.slack.com/archives/C086NLDTABA/p1747201586961409">秘密キーとは？</a>
+          </div>
+          </div>
+          <div class="card-actions items-center gap-6">
+            <button class="btn btn-primary">登録する</button>
+            <button class="link">ログイン画面へ</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <script>
+    const themeSelect = document.getElementById('theme_selector');
+    themeSelect.addEventListener('change', (event) => {
+      document.body.setAttribute('data-theme', event.target.value);
+    });
+  </script>
+</body>
+</html>
