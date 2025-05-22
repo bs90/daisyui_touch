@@ -1,0 +1,385 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width">
+  <link href="https://cdn.jsdelivr.net/npm/daisyui@5" rel="stylesheet" type="text/css" />
+  <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+  <link href="https://cdn.jsdelivr.net/npm/daisyui@5/themes.css" rel="stylesheet" type="text/css"/>
+</head>
+<body data-theme="caramellatte" class="bg-base-100">
+  <div id="avatar" class="cursor-pointer absolute left-5 top-5">
+    <img src="https://en.sun-asterisk.com/wp-content/themes/basetemplate/assets/images/sustainability/susti-sunbear.svg" class="w-[50px] h-[50px] transition-transform duration-300 hover:rotate-12" />
+  </div>
+  <div id="user_menu" class="hidden absolute left-5 top-20">
+    <div class="card bg-base-100 card-border border-base-300">
+      <ul class="menu w-full">
+        <li>
+          <span class="font-bold">
+            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-5 opacity-30">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M15.75 6a3.75 3.75 0 1 1-7.5 0 3.75 3.75 0 0 1 7.5 0ZM4.501 20.118a7.5 7.5 0 0 1 14.998 0A17.933 17.933 0 0 1 12 21.75c-2.676 0-5.216-.584-7.499-1.632Z"></path>
+            </svg>
+            たっちゃん</span>
+        </li>
+        <li>
+          <span>
+            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-5 opacity-30">
+              <path stroke-linecap="round" stroke-linejoin="round" d="m21 7.5-9-5.25L3 7.5m18 0-9 5.25m9-5.25v9l-9 5.25M3 7.5l9 5.25M3 7.5v9l9 5.25m0-9v9"></path>
+            </svg> ホーム</span>
+        </li>
+        <li>
+          <span>
+            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-5 opacity-30">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M6 13.5V3.75m0 9.75a1.5 1.5 0 0 1 0 3m0-3a1.5 1.5 0 0 0 0 3m0 3.75V16.5m12-3V3.75m0 9.75a1.5 1.5 0 0 1 0 3m0-3a1.5 1.5 0 0 0 0 3m0 3.75V16.5m-6-9V3.75m0 3.75a1.5 1.5 0 0 1 0 3m0-3a1.5 1.5 0 0 0 0 3m0 9.75V10.5"></path>
+            </svg> 設定 </span>
+        </li>
+      </ul>
+    </div>
+  </div>
+  <div class="form-control w-64 absolute bottom-0 left-0">
+    <select id="theme_selector">
+      <option>light</option>
+      <option>cupcake</option>
+      <option>bumblebee</option>
+      <option>emerald</option>
+      <option>corporate</option>
+      <option>synthwave</option>
+      <option>retro</option>
+      <option>cyberpunk</option>
+      <option>valentine</option>
+      <option>halloween</option>
+      <option>garden</option>
+      <option>forest</option>
+      <option>aqua</option>
+      <option>lofi</option>
+      <option>pastel</option>
+      <option>fantasy</option>
+      <option>wireframe</option>
+      <option>black</option>
+      <option>luxury</option>
+      <option>dracula</option>
+      <option>cmyk</option>
+      <option>autumn</option>
+      <option>business</option>
+      <option>acid</option>
+      <option>lemonade</option>
+      <option>night</option>
+      <option>coffee</option>
+      <option>winter</option>
+      <option>dim</option>
+      <option>nord</option>
+      <option>sunset</option>
+      <option selected>caramellatte</option>
+      <option>abyss</option>
+      <option>silk</option>
+    </select>
+  </div>
+  <div class="flex h-screen">
+    <div class="flex-1 h-full bg-secondary">
+    </div>
+    <div class="flex flex-col h-screen w-[500px] rounded-none bg-base-100">
+      <div class="flex items-center gap-2 p-4 border-b border-base-300 border-dashed">
+        <div class="flex items-center gap-2 text-sm font-medium w-full">
+          <span class="text-xl">やり取り一覧</span>
+        </div>
+      </div>
+
+      <div class="flex-1 overflow-y-auto p-4 space-y-4">
+        <div class="cursor-pointer w-full timeline-box timeline-box transition-transform duration-300 ease-in-out hover:scale-105">
+          <a href="chatshow.html" class="flex items-center gap-2">
+            <div class="avatar">
+              <div class="w-8 rounded-full">
+                <img src="https://en.sun-asterisk.com/wp-content/themes/basetemplate/assets/images/sustainability/susti-sunbear.svg">
+              </div>
+            </div>
+            <div class="flex flex-col gap-1">
+              <span class="text-sm font-bold">南千住駅（25）</span>
+              <div class="break-normal break-words">最近ずっとフルリモートで働いてるから、会社の人とあまり関わりがなくて…ちょっと寂しいんだよね。</div>
+            </div>
+          </a>
+        </div>
+        <div class="cursor-pointer w-full timeline-box timeline-box transition-transform duration-300 ease-in-out hover:scale-105">
+          <a href="chatshow.html" class="flex items-center gap-2">
+            <div class="avatar">
+              <div class="w-8 rounded-full">
+                <img src="https://en.sun-asterisk.com/wp-content/themes/basetemplate/assets/images/sustainability/susti-sunbear.svg">
+              </div>
+            </div>
+            <div class="flex flex-col gap-1">
+              <span class="text-sm font-bold">南千住駅（25）</span>
+              <div class="break-normal break-words">最近ずっとフルリモートで働いてるから、会社の人とあまり関わりがなくて…ちょっと寂しいんだよね。</div>
+            </div>
+          </a>
+        </div>
+        <div class="cursor-pointer w-full timeline-box timeline-box transition-transform duration-300 ease-in-out hover:scale-105">
+          <div class="flex items-center gap-2">
+            <div class="avatar">
+              <div class="w-8 rounded-full">
+                <img src="https://en.sun-asterisk.com/wp-content/themes/basetemplate/assets/images/sustainability/susti-sunbear.svg">
+              </div>
+            </div>
+            <div class="flex flex-col gap-1">
+              <span class="text-sm font-bold">
+                <span class="badge badge-xs badge-success font-mono"></span>
+                南千住駅（25）
+              </span>
+              <div class="break-normal break-words">最近ずっとフルリモートで働いてるから、会社の人とあまり関わりがなくて…ちょっと寂しいんだよね。</div>
+            </div>
+          </div>
+        </div>
+        <div class="cursor-pointer w-full timeline-box timeline-box transition-transform duration-300 ease-in-out hover:scale-105">
+          <div class="flex items-center gap-2">
+            <div class="avatar">
+              <div class="w-8 rounded-full">
+                <img src="https://en.sun-asterisk.com/wp-content/themes/basetemplate/assets/images/sustainability/susti-sunbear.svg">
+              </div>
+            </div>
+            <div class="flex flex-col gap-1">
+              <span class="text-sm font-bold">
+                <span class="badge badge-xs badge-success font-mono"></span>
+                南千住駅（25）
+              </span>
+              <div class="break-normal break-words">最近ずっとフルリモートで働いてるから、会社の人とあまり関わりがなくて…ちょっと寂しいんだよね。</div>
+            </div>
+          </div>
+        </div>
+        <div class="cursor-pointer w-full timeline-box timeline-box transition-transform duration-300 ease-in-out hover:scale-105">
+          <div class="flex items-center gap-2">
+            <div class="avatar">
+              <div class="w-8 rounded-full">
+                <img src="https://en.sun-asterisk.com/wp-content/themes/basetemplate/assets/images/sustainability/susti-sunbear.svg">
+              </div>
+            </div>
+            <div class="flex flex-col gap-1">
+              <span class="text-sm font-bold">南千住駅（25）</span>
+              <div class="break-normal break-words">最近ずっとフルリモートで働いてるから、会社の人とあまり関わりがなくて…ちょっと寂しいんだよね。</div>
+            </div>
+          </div>
+        </div>
+        <div class="cursor-pointer w-full timeline-box timeline-box transition-transform duration-300 ease-in-out hover:scale-105">
+          <div class="flex items-center gap-2">
+            <div class="avatar">
+              <div class="w-8 rounded-full">
+                <img src="https://en.sun-asterisk.com/wp-content/themes/basetemplate/assets/images/sustainability/susti-sunbear.svg">
+              </div>
+            </div>
+            <div class="flex flex-col gap-1">
+              <span class="text-sm font-bold">南千住駅（25）</span>
+              <div class="break-normal break-words">最近ずっとフルリモートで働いてるから、会社の人とあまり関わりがなくて…ちょっと寂しいんだよね。</div>
+            </div>
+          </div>
+        </div>
+        <div class="cursor-pointer w-full timeline-box timeline-box transition-transform duration-300 ease-in-out hover:scale-105">
+          <div class="flex items-center gap-2">
+            <div class="avatar">
+              <div class="w-8 rounded-full">
+                <img src="https://en.sun-asterisk.com/wp-content/themes/basetemplate/assets/images/sustainability/susti-sunbear.svg">
+              </div>
+            </div>
+            <div class="flex flex-col gap-1">
+              <span class="text-sm font-bold">南千住駅（25）</span>
+              <div class="break-normal break-words">最近ずっとフルリモートで働いてるから、会社の人とあまり関わりがなくて…ちょっと寂しいんだよね。</div>
+            </div>
+          </div>
+        </div>
+        <div class="cursor-pointer w-full timeline-box timeline-box transition-transform duration-300 ease-in-out hover:scale-105">
+          <div class="flex items-center gap-2">
+            <div class="avatar">
+              <div class="w-8 rounded-full">
+                <img src="https://en.sun-asterisk.com/wp-content/themes/basetemplate/assets/images/sustainability/susti-sunbear.svg">
+              </div>
+            </div>
+            <div class="flex flex-col gap-1">
+              <span class="text-sm font-bold">南千住駅（25）</span>
+              <div class="break-normal break-words">最近ずっとフルリモートで働いてるから、会社の人とあまり関わりがなくて…ちょっと寂しいんだよね。</div>
+            </div>
+          </div>
+        </div>
+        <div class="cursor-pointer w-full timeline-box timeline-box transition-transform duration-300 ease-in-out hover:scale-105">
+          <div class="flex items-center gap-2">
+            <div class="avatar">
+              <div class="w-8 rounded-full">
+                <img src="https://en.sun-asterisk.com/wp-content/themes/basetemplate/assets/images/sustainability/susti-sunbear.svg">
+              </div>
+            </div>
+            <div class="flex flex-col gap-1">
+              <span class="text-sm font-bold">南千住駅（25）</span>
+              <div class="break-normal break-words">最近ずっとフルリモートで働いてるから、会社の人とあまり関わりがなくて…ちょっと寂しいんだよね。</div>
+            </div>
+          </div>
+        </div>
+        <div class="cursor-pointer w-full timeline-box timeline-box transition-transform duration-300 ease-in-out hover:scale-105">
+          <div class="flex items-center gap-2">
+            <div class="avatar">
+              <div class="w-8 rounded-full">
+                <img src="https://en.sun-asterisk.com/wp-content/themes/basetemplate/assets/images/sustainability/susti-sunbear.svg">
+              </div>
+            </div>
+            <div class="flex flex-col gap-1">
+              <span class="text-sm font-bold">南千住駅（25）</span>
+              <div class="break-normal break-words">最近ずっとフルリモートで働いてるから、会社の人とあまり関わりがなくて…ちょっと寂しいんだよね。</div>
+            </div>
+          </div>
+        </div>
+        <div class="cursor-pointer w-full timeline-box timeline-box transition-transform duration-300 ease-in-out hover:scale-105">
+          <div class="flex items-center gap-2">
+            <div class="avatar">
+              <div class="w-8 rounded-full">
+                <img src="https://en.sun-asterisk.com/wp-content/themes/basetemplate/assets/images/sustainability/susti-sunbear.svg">
+              </div>
+            </div>
+            <div class="flex flex-col gap-1">
+              <span class="text-sm font-bold">南千住駅（25）</span>
+              <div class="break-normal break-words">最近ずっとフルリモートで働いてるから、会社の人とあまり関わりがなくて…ちょっと寂しいんだよね。</div>
+            </div>
+          </div>
+        </div>
+        <div class="cursor-pointer w-full timeline-box timeline-box transition-transform duration-300 ease-in-out hover:scale-105">
+          <div class="flex items-center gap-2">
+            <div class="avatar">
+              <div class="w-8 rounded-full">
+                <img src="https://en.sun-asterisk.com/wp-content/themes/basetemplate/assets/images/sustainability/susti-sunbear.svg">
+              </div>
+            </div>
+            <div class="flex flex-col gap-1">
+              <span class="text-sm font-bold">南千住駅（25）</span>
+              <div class="break-normal break-words">最近ずっとフルリモートで働いてるから、会社の人とあまり関わりがなくて…ちょっと寂しいんだよね。</div>
+            </div>
+          </div>
+        </div>
+        <div class="cursor-pointer w-full timeline-box timeline-box transition-transform duration-300 ease-in-out hover:scale-105">
+          <div class="flex items-center gap-2">
+            <div class="avatar">
+              <div class="w-8 rounded-full">
+                <img src="https://en.sun-asterisk.com/wp-content/themes/basetemplate/assets/images/sustainability/susti-sunbear.svg">
+              </div>
+            </div>
+            <div class="flex flex-col gap-1">
+              <span class="text-sm font-bold">南千住駅（25）</span>
+              <div class="break-normal break-words">最近ずっとフルリモートで働いてるから、会社の人とあまり関わりがなくて…ちょっと寂しいんだよね。</div>
+            </div>
+          </div>
+        </div>
+        <div class="cursor-pointer w-full timeline-box timeline-box transition-transform duration-300 ease-in-out hover:scale-105">
+          <div class="flex items-center gap-2">
+            <div class="avatar">
+              <div class="w-8 rounded-full">
+                <img src="https://en.sun-asterisk.com/wp-content/themes/basetemplate/assets/images/sustainability/susti-sunbear.svg">
+              </div>
+            </div>
+            <div class="flex flex-col gap-1">
+              <span class="text-sm font-bold">南千住駅（25）</span>
+              <div class="break-normal break-words">最近ずっとフルリモートで働いてるから、会社の人とあまり関わりがなくて…ちょっと寂しいんだよね。</div>
+            </div>
+          </div>
+        </div>
+        <div class="cursor-pointer w-full timeline-box timeline-box transition-transform duration-300 ease-in-out hover:scale-105">
+          <div class="flex items-center gap-2">
+            <div class="avatar">
+              <div class="w-8 rounded-full">
+                <img src="https://en.sun-asterisk.com/wp-content/themes/basetemplate/assets/images/sustainability/susti-sunbear.svg">
+              </div>
+            </div>
+            <div class="flex flex-col gap-1">
+              <span class="text-sm font-bold">南千住駅（25）</span>
+              <div class="break-normal break-words">最近ずっとフルリモートで働いてるから、会社の人とあまり関わりがなくて…ちょっと寂しいんだよね。</div>
+            </div>
+          </div>
+        </div>
+        <div class="cursor-pointer w-full timeline-box timeline-box transition-transform duration-300 ease-in-out hover:scale-105">
+          <div class="flex items-center gap-2">
+            <div class="avatar">
+              <div class="w-8 rounded-full">
+                <img src="https://en.sun-asterisk.com/wp-content/themes/basetemplate/assets/images/sustainability/susti-sunbear.svg">
+              </div>
+            </div>
+            <div class="flex flex-col gap-1">
+              <span class="text-sm font-bold">南千住駅（25）</span>
+              <div class="break-normal break-words">最近ずっとフルリモートで働いてるから、会社の人とあまり関わりがなくて…ちょっと寂しいんだよね。</div>
+            </div>
+          </div>
+        </div>
+        <div class="cursor-pointer w-full timeline-box timeline-box transition-transform duration-300 ease-in-out hover:scale-105">
+          <div class="flex items-center gap-2">
+            <div class="avatar">
+              <div class="w-8 rounded-full">
+                <img src="https://en.sun-asterisk.com/wp-content/themes/basetemplate/assets/images/sustainability/susti-sunbear.svg">
+              </div>
+            </div>
+            <div class="flex flex-col gap-1">
+              <span class="text-sm font-bold">南千住駅（25）</span>
+              <div class="break-normal break-words">最近ずっとフルリモートで働いてるから、会社の人とあまり関わりがなくて…ちょっと寂しいんだよね。</div>
+            </div>
+          </div>
+        </div>
+        <div class="cursor-pointer w-full timeline-box timeline-box transition-transform duration-300 ease-in-out hover:scale-105">
+          <div class="flex items-center gap-2">
+            <div class="avatar">
+              <div class="w-8 rounded-full">
+                <img src="https://en.sun-asterisk.com/wp-content/themes/basetemplate/assets/images/sustainability/susti-sunbear.svg">
+              </div>
+            </div>
+            <div class="flex flex-col gap-1">
+              <span class="text-sm font-bold">南千住駅（25）</span>
+              <div class="break-normal break-words">最近ずっとフルリモートで働いてるから、会社の人とあまり関わりがなくて…ちょっと寂しいんだよね。</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </div>
+  <div class="hidden flex items-center justify-center min-h-screen" id="end_description">
+    <div class="flex flex-col items-center space-y-4">
+      <img style="transform: rotate(15deg);" class="transition-transform duration-300 hover:rotate-12 mb-[-15px] w-[150px]" src="https://en.sun-asterisk.com/wp-content/themes/basetemplate/assets/images/sustainability/susti-sunbear.svg">
+      <div class="scale-150 card bg-base-100 card-border border-base-300 from-base-content/5 bg-linear-to-bl to-50%">
+        <div class="card-body gap-4">
+          <div class="my-2 flex flex-col text-xs">
+            <div class="flex items-center gap-2 pb-2">
+              <span class="text-alert">●</span>
+              フルリモートで全然出社してないけど、社内の人ともっと仲良くなりたい
+            </div>
+            <div class="flex items-center gap-2 pb-2">
+              <span class="text-alert">●</span>
+              近くに住んでるSun*メンバーで、気が合いそうな人っているのかな？
+            </div>
+            <div class="font-bold divider">なら、SUN*タッチ</div>
+            <div class="flex items-center gap-2 pb-2">
+              <span class="text-success">●</span>
+              同じ最寄り駅や市区町村に住んでるSun*メンバーとチャットで交流できる
+            </div>
+            <div class="flex items-center gap-2 pb-2">
+              <span class="text-success">●</span>
+              Sun*メンバー限定、<span class="text-xl font-bold">完全匿名</span>で利用できて安心
+            </div>
+          </div>
+          <a href="signup.html" class="btn btn-accent">登録する</a>
+          <div class="flex justify-center">
+            <a href="" class="link">もう1回説明を見る</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+    <script>
+    const themeSelect = document.getElementById('theme_selector');
+    themeSelect.addEventListener('change', (event) => {
+      document.body.setAttribute('data-theme', event.target.value);
+    });
+
+    const avatar = document.querySelector('#avatar');
+    const userMenu = document.querySelector('#user_menu');
+
+    if (avatar && userMenu) {
+      avatar.addEventListener('click', (e) => {
+        e.stopPropagation();
+        userMenu.classList.remove('hidden');
+      });
+
+      document.addEventListener('click', () => {
+        userMenu.classList.add('hidden');
+      });
+    }
+  </script>
+</body>
+</html>
