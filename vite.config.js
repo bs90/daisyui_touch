@@ -8,7 +8,7 @@ export default defineConfig({
         index: resolve(__dirname, 'index.html'),
         signup: resolve(__dirname, 'signup.html'),
         login: resolve(__dirname, 'login.html'),
-        main: resolve(__dirname, 'main.html')
+        chatshow: resolve(__dirname, 'chatshow.html')
       }
     }
   }

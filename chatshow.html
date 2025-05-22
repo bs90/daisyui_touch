@@ -8,7 +8,29 @@
   <link href="https://cdn.jsdelivr.net/npm/daisyui@5/themes.css" rel="stylesheet" type="text/css"/>
 </head>
 <body data-theme="caramellatte" class="bg-base-100">
-  <div class="form-control w-64 absolute">
+  <div id="avatar" class="cursor-pointer absolute left-5 top-5">
+    <img src="https://en.sun-asterisk.com/wp-content/themes/basetemplate/assets/images/sustainability/susti-sunbear.svg" class="w-[50px] h-[50px] transition-transform duration-300 hover:rotate-12" />
+  </div>
+  <div id="user_menu" class="hidden absolute left-5 top-20">
+    <div class="card bg-base-100 card-border border-base-300">
+      <ul class="menu w-full">
+        <li>
+          <span>
+            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-5 opacity-30">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M15.75 6a3.75 3.75 0 1 1-7.5 0 3.75 3.75 0 0 1 7.5 0ZM4.501 20.118a7.5 7.5 0 0 1 14.998 0A17.933 17.933 0 0 1 12 21.75c-2.676 0-5.216-.584-7.499-1.632Z"></path>
+            </svg> プロフィール
+          </span>
+        </li>
+        <li>
+          <span>
+            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-5 opacity-30">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M6 13.5V3.75m0 9.75a1.5 1.5 0 0 1 0 3m0-3a1.5 1.5 0 0 0 0 3m0 3.75V16.5m12-3V3.75m0 9.75a1.5 1.5 0 0 1 0 3m0-3a1.5 1.5 0 0 0 0 3m0 3.75V16.5m-6-9V3.75m0 3.75a1.5 1.5 0 0 1 0 3m0-3a1.5 1.5 0 0 0 0 3m0 9.75V10.5"></path>
+            </svg> 設定 </span>
+        </li>
+      </ul>
+    </div>
+  </div>
+  <div class="form-control w-64 absolute bottom-0 left-0">
     <select id="theme_selector">
       <option>light</option>
       <option>cupcake</option>
@@ -49,21 +71,17 @@
   <div class="flex h-screen">
     <div class="flex-1 h-full bg-secondary">
     </div>
-    <div class="w-[500px] rounded-none bg-base-100">
-      <div class="flex items-center gap-2 p-4">
-        <div class="border-base-300 border-b border-dashed w-full">
-          <div class="flex items-center gap-2 p-4">
-            <div class="grow">
-              <div class="flex items-center gap-2 text-sm font-medium">
-                <button class="btn btn-square btn-secondary">←</button>
-                <img src="https://en.sun-asterisk.com/wp-content/themes/basetemplate/assets/images/sustainability/susti-sunbear.svg" alt="Sun* Logo" class="w-[25px] h-[25px]"/>
-                <span class="text-xl">南千住駅（25）</span>
-              </div>
-            </div>
-          </div>
+    <div class="flex flex-col h-screen w-[500px] rounded-none bg-base-100">
+      <div class="flex items-center gap-2 p-4 border-b border-base-300 border-dashed">
+        <div class="flex items-center gap-2 text-sm font-medium w-full">
+          <button class="btn btn-square btn-danger">←</button>
+          <img src="https://en.sun-asterisk.com/wp-content/themes/basetemplate/assets/images/sustainability/susti-sunbear.svg"
+              alt="Sun* Logo" class="w-[25px] h-[25px]" />
+          <span class="text-xl">南千住駅（25）</span>
         </div>
       </div>
-      <div class="items-center gap-2 p-4 overflow-y-scroll h-[calc(100vh-200px)]">
+
+      <div class="flex-1 overflow-y-auto p-4 space-y-4">
         <div class="one-chat chat chat-start">
           <div class="chat-image avatar">
             <div class="w-8 rounded-full">
@@ -168,7 +186,6 @@
           <div class="chat-header">たっちゃん</div>
           <div class="chat-bubble chat-bubble-neutral break-normal break-words bg-success">いいね！週一で軽い運動とかどう？</div>
         </div>
-
         <div class="one-chat chat chat-start">
           <div class="chat-image avatar">
             <div class="w-8 rounded-full">
@@ -272,9 +289,17 @@
         <div class="one-chat chat chat-end">
           <div class="chat-header">たっちゃん</div>
           <div class="chat-bubble chat-bubble-neutral break-normal break-words bg-success">いいね！週一で軽い運動とかどう？</div>
+        </div>
+      </div>
+
+      <div class="p-4 border-t border-base-300">
+        <div class="card-body gap-4">
+          <textarea class="w-full textarea textarea-border max-w-none resize-none"></textarea>
+          <div class="card-actions grid grid-cols-1"></button><button class="btn btn-danger">送信</button></div>
         </div>
       </div>
     </div>
+
   </div>
   <div class="hidden flex items-center justify-center min-h-screen" id="end_description">
     <div class="flex flex-col items-center space-y-4">
@@ -313,6 +338,15 @@
     themeSelect.addEventListener('change', (event) => {
       document.body.setAttribute('data-theme', event.target.value);
     });
+
+    const avatar = document.querySelector('#avatar');
+    const userMenu = document.querySelector('#user_menu');
+
+    if (avatar && userMenu) {
+      avatar.addEventListener('click', () => {
+        userMenu.classList.remove('hidden');
+      });
+    }
   </script>
 </body>
 </html>
