@@ -8,28 +8,28 @@
   <link href="https://cdn.jsdelivr.net/npm/daisyui@5/themes.css" rel="stylesheet" type="text/css"/>
 </head>
 <body data-theme="caramellatte" class="bg-base-100">
-  <div id="avatar" class="cursor-pointer absolute left-5 top-5">
-    <img src="https://en.sun-asterisk.com/wp-content/themes/basetemplate/assets/images/sustainability/susti-sunbear.svg" class="w-[50px] h-[50px] transition-transform duration-300 hover:rotate-12" />
+  <div id="avatar" class="z-10 cursor-pointer absolute left-5 top-5">
+    <img src="https://picsum.photos/200" class="w-[40px] h-[40px] transition-transform duration-300 hover:rotate-12 border border-base-300 border-[3px] rounded-[50px]" />
   </div>
-  <div id="user_menu" class="hidden absolute left-5 top-20">
+  <div id="user_menu" class="z-10 hidden absolute left-5 top-16">
     <div class="card bg-base-100 card-border border-base-300">
       <ul class="menu w-full">
         <li>
           <span class="font-bold">
-            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-5 opacity-30">
+            <svg fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-5 opacity-30">
               <path stroke-linecap="round" stroke-linejoin="round" d="M15.75 6a3.75 3.75 0 1 1-7.5 0 3.75 3.75 0 0 1 7.5 0ZM4.501 20.118a7.5 7.5 0 0 1 14.998 0A17.933 17.933 0 0 1 12 21.75c-2.676 0-5.216-.584-7.499-1.632Z"></path>
             </svg>
             たっちゃん</span>
         </li>
         <li>
           <span>
-            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-5 opacity-30">
+            <svg fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-5 opacity-30">
               <path stroke-linecap="round" stroke-linejoin="round" d="m21 7.5-9-5.25L3 7.5m18 0-9 5.25m9-5.25v9l-9 5.25M3 7.5l9 5.25M3 7.5v9l9 5.25m0-9v9"></path>
             </svg> ホーム</span>
         </li>
         <li>
           <span>
-            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-5 opacity-30">
+            <svg fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-5 opacity-30">
               <path stroke-linecap="round" stroke-linejoin="round" d="M6 13.5V3.75m0 9.75a1.5 1.5 0 0 1 0 3m0-3a1.5 1.5 0 0 0 0 3m0 3.75V16.5m12-3V3.75m0 9.75a1.5 1.5 0 0 1 0 3m0-3a1.5 1.5 0 0 0 0 3m0 3.75V16.5m-6-9V3.75m0 3.75a1.5 1.5 0 0 1 0 3m0-3a1.5 1.5 0 0 0 0 3m0 9.75V10.5"></path>
             </svg> 設定 </span>
         </li>
@@ -75,13 +75,13 @@
     </select>
   </div>
   <div class="flex h-screen">
-    <div class="flex-1 h-full bg-secondary">
+    <div class="flex-1 h-full bg-secondary" id="map_container">
     </div>
     <div class="flex flex-col h-screen w-[500px] rounded-none bg-base-100">
       <div class="flex items-center gap-2 p-4 border-b border-base-300 border-dashed">
         <div class="flex items-center gap-2 text-sm font-medium w-full">
           <a href="chatlist.html" class="btn btn-square btn-danger">←</a>
-          <img src="https://en.sun-asterisk.com/wp-content/themes/basetemplate/assets/images/sustainability/susti-sunbear.svg"
+          <img src="https://picsum.photos/200"
               alt="Sun* Logo" class="w-[25px] h-[25px]" />
           <span class="text-xl">南千住駅（25）</span>
         </div>
@@ -91,7 +91,7 @@
         <div class="one-chat chat chat-start">
           <div class="chat-image avatar">
             <div class="w-8 rounded-full">
-              <img alt="Tailwind CSS chat bubble component" src="https://en.sun-asterisk.com/wp-content/themes/basetemplate/assets/images/sustainability/susti-sunbear.svg">
+              <img alt="Tailwind CSS chat bubble component" src="https://picsum.photos/200">
             </div>
           </div>
           <div class="chat-header">くま</div>
@@ -106,7 +106,7 @@
         <div class="one-chat chat chat-start">
           <div class="chat-image avatar">
             <div class="w-8 rounded-full">
-              <img alt="Tailwind CSS chat bubble component" src="https://en.sun-asterisk.com/wp-content/themes/basetemplate/assets/images/sustainability/susti-sunbear.svg">
+              <img alt="Tailwind CSS chat bubble component" src="https://picsum.photos/200">
             </div>
           </div>
           <div class="chat-header">くま</div>
@@ -121,7 +121,7 @@
         <div class="one-chat chat chat-start">
           <div class="chat-image avatar">
             <div class="w-8 rounded-full">
-              <img alt="Tailwind CSS chat bubble component" src="https://en.sun-asterisk.com/wp-content/themes/basetemplate/assets/images/sustainability/susti-sunbear.svg">
+              <img alt="Tailwind CSS chat bubble component" src="https://picsum.photos/200">
             </div>
           </div>
           <div class="chat-header">くま</div>
@@ -136,7 +136,7 @@
         <div class="one-chat chat chat-start">
           <div class="chat-image avatar">
             <div class="w-8 rounded-full">
-              <img alt="Tailwind CSS chat bubble component" src="https://en.sun-asterisk.com/wp-content/themes/basetemplate/assets/images/sustainability/susti-sunbear.svg">
+              <img alt="Tailwind CSS chat bubble component" src="https://picsum.photos/200">
             </div>
           </div>
           <div class="chat-header">くま</div>
@@ -151,7 +151,7 @@
         <div class="one-chat chat chat-start">
           <div class="chat-image avatar">
             <div class="w-8 rounded-full">
-              <img alt="Tailwind CSS chat bubble component" src="https://en.sun-asterisk.com/wp-content/themes/basetemplate/assets/images/sustainability/susti-sunbear.svg">
+              <img alt="Tailwind CSS chat bubble component" src="https://picsum.photos/200">
             </div>
           </div>
           <div class="chat-header">くま</div>
@@ -166,7 +166,7 @@
         <div class="one-chat chat chat-start">
           <div class="chat-image avatar">
             <div class="w-8 rounded-full">
-              <img alt="Tailwind CSS chat bubble component" src="https://en.sun-asterisk.com/wp-content/themes/basetemplate/assets/images/sustainability/susti-sunbear.svg">
+              <img alt="Tailwind CSS chat bubble component" src="https://picsum.photos/200">
             </div>
           </div>
           <div class="chat-header">くま</div>
@@ -181,7 +181,7 @@
         <div class="one-chat chat chat-start">
           <div class="chat-image avatar">
             <div class="w-8 rounded-full">
-              <img alt="Tailwind CSS chat bubble component" src="https://en.sun-asterisk.com/wp-content/themes/basetemplate/assets/images/sustainability/susti-sunbear.svg">
+              <img alt="Tailwind CSS chat bubble component" src="https://picsum.photos/200">
             </div>
           </div>
           <div class="chat-header">くま</div>
@@ -195,7 +195,7 @@
         <div class="one-chat chat chat-start">
           <div class="chat-image avatar">
             <div class="w-8 rounded-full">
-              <img alt="Tailwind CSS chat bubble component" src="https://en.sun-asterisk.com/wp-content/themes/basetemplate/assets/images/sustainability/susti-sunbear.svg">
+              <img alt="Tailwind CSS chat bubble component" src="https://picsum.photos/200">
             </div>
           </div>
           <div class="chat-header">くま</div>
@@ -210,7 +210,7 @@
         <div class="one-chat chat chat-start">
           <div class="chat-image avatar">
             <div class="w-8 rounded-full">
-              <img alt="Tailwind CSS chat bubble component" src="https://en.sun-asterisk.com/wp-content/themes/basetemplate/assets/images/sustainability/susti-sunbear.svg">
+              <img alt="Tailwind CSS chat bubble component" src="https://picsum.photos/200">
             </div>
           </div>
           <div class="chat-header">くま</div>
@@ -225,7 +225,7 @@
         <div class="one-chat chat chat-start">
           <div class="chat-image avatar">
             <div class="w-8 rounded-full">
-              <img alt="Tailwind CSS chat bubble component" src="https://en.sun-asterisk.com/wp-content/themes/basetemplate/assets/images/sustainability/susti-sunbear.svg">
+              <img alt="Tailwind CSS chat bubble component" src="https://picsum.photos/200">
             </div>
           </div>
           <div class="chat-header">くま</div>
@@ -240,7 +240,7 @@
         <div class="one-chat chat chat-start">
           <div class="chat-image avatar">
             <div class="w-8 rounded-full">
-              <img alt="Tailwind CSS chat bubble component" src="https://en.sun-asterisk.com/wp-content/themes/basetemplate/assets/images/sustainability/susti-sunbear.svg">
+              <img alt="Tailwind CSS chat bubble component" src="https://picsum.photos/200">
             </div>
           </div>
           <div class="chat-header">くま</div>
@@ -255,7 +255,7 @@
         <div class="one-chat chat chat-start">
           <div class="chat-image avatar">
             <div class="w-8 rounded-full">
-              <img alt="Tailwind CSS chat bubble component" src="https://en.sun-asterisk.com/wp-content/themes/basetemplate/assets/images/sustainability/susti-sunbear.svg">
+              <img alt="Tailwind CSS chat bubble component" src="https://picsum.photos/200">
             </div>
           </div>
           <div class="chat-header">くま</div>
@@ -270,7 +270,7 @@
         <div class="one-chat chat chat-start">
           <div class="chat-image avatar">
             <div class="w-8 rounded-full">
-              <img alt="Tailwind CSS chat bubble component" src="https://en.sun-asterisk.com/wp-content/themes/basetemplate/assets/images/sustainability/susti-sunbear.svg">
+              <img alt="Tailwind CSS chat bubble component" src="https://picsum.photos/200">
             </div>
           </div>
           <div class="chat-header">くま</div>
@@ -285,7 +285,7 @@
         <div class="one-chat chat chat-start">
           <div class="chat-image avatar">
             <div class="w-8 rounded-full">
-              <img alt="Tailwind CSS chat bubble component" src="https://en.sun-asterisk.com/wp-content/themes/basetemplate/assets/images/sustainability/susti-sunbear.svg">
+              <img alt="Tailwind CSS chat bubble component" src="https://picsum.photos/200">
             </div>
           </div>
           <div class="chat-header">くま</div>
@@ -309,7 +309,7 @@
   </div>
   <div class="hidden flex items-center justify-center min-h-screen" id="end_description">
     <div class="flex flex-col items-center space-y-4">
-      <img style="transform: rotate(15deg);" class="transition-transform duration-300 hover:rotate-12 mb-[-15px] w-[150px]" src="https://en.sun-asterisk.com/wp-content/themes/basetemplate/assets/images/sustainability/susti-sunbear.svg">
+      <img style="transform: rotate(15deg);" class="transition-transform duration-300 hover:rotate-12 mb-[-15px] w-[150px]" src="https://picsum.photos/200">
       <div class="scale-150 card bg-base-100 card-border border-base-300 from-base-content/5 bg-linear-to-bl to-50%">
         <div class="card-body gap-4">
           <div class="my-2 flex flex-col text-xs">
@@ -339,7 +339,33 @@
       </div>
     </div>
   </div>
-    <script>
+  <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBYhq9ufPyOdCMCzdhemwOf7EGPPWkAzDg&callback=initMap" async defer></script>
+  <script>
+    async function initMap() {
+      const { Map } = await google.maps.importLibrary("maps");
+      const { AdvancedMarkerElement } = await google.maps.importLibrary("marker");
+      const map = new Map(document.getElementById("map_container"), {
+        center: { lat: 35.7331617, lng: 139.7945449 },
+        zoom: 16,
+        mapId: "12db1eba72ee90d2",
+        mapTypeControl: false,
+        streetViewControl: false,
+        fullscreenControl: false,
+        zoomControl: false
+      });
+
+      const pinImg = document.createElement('img');
+      pinImg.src = 'https://en.sun-asterisk.com/wp-content/themes/basetemplate/assets/images/sustainability/susti-sunbear.svg';
+      pinImg.width = 40;
+      pinImg.height = 40;
+      
+      const marker = new AdvancedMarkerElement({
+        map,
+        position: { lat: 35.7331617, lng: 139.7945449 },
+        content: pinImg
+      });
+    }
+    
     const themeSelect = document.getElementById('theme_selector');
     themeSelect.addEventListener('change', (event) => {
       document.body.setAttribute('data-theme', event.target.value);
